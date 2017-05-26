@@ -1,38 +1,29 @@
 package wellington.br.com.trucocounter;
 
-import android.content.Intent;
 import android.graphics.Typeface;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class InverseActivity extends AppCompatActivity {
 
-    @Bind(R.id.llThey)
+    @Bind(R.id.llTheyInverse)
     LinearLayout llThey;
-    @Bind(R.id.llWe)
+    @Bind(R.id.llWeInverse)
     LinearLayout llWe;
 
-    @Bind(R.id.tvNameThey)
+    @Bind(R.id.tvNameTheyInverse)
     TextView tvNameThey;
-    @Bind(R.id.tvNameWe)
+    @Bind(R.id.tvNameWeInverse)
     TextView tvNameWe;
-    @Bind(R.id.tvContadorThey)
+    @Bind(R.id.tvContadorTheyInverse)
     TextView tvContadorThey;
-    @Bind(R.id.tvContadorWe)
+    @Bind(R.id.tvContadorWeInverse)
     TextView tvContadorWe;
-
 
 
 
@@ -41,13 +32,11 @@ public class MainActivity extends AppCompatActivity {
     private int they = 0;
     private int max = 12;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inverse);
         ButterKnife.bind(this);
-
 
         Typeface type = Typeface.createFromAsset(getAssets(), "fonts/chalk.ttf");
 
@@ -58,24 +47,25 @@ public class MainActivity extends AppCompatActivity {
 
         weCount();
         theyCount();
-
-    }
-
-    @OnClick(R.id.btn)
-    public void inverse(){
-        Bundle bundle = new Bundle();
-        if (bundle != null){
-            Intent intent = new Intent(this, InverseActivity.class);
-            startActivity(intent);
-        }
     }
 
     private void theyCount() {
         tvContadorThey.setText(String.valueOf(they));
-        llThey.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+        llThey.setOnTouchListener(new OnSwipeTouchListener(InverseActivity.this) {
             @Override
             public void onSwipeTop() {
                 super.onSwipeTop();
+                if (they > min) {
+                    they = they - 1;
+                    tvContadorThey.setText(String.valueOf(they));
+                }
+
+            }
+
+            @Override
+            public void onSwipeBottom() {
+                super.onSwipeBottom();
+
                 if (they >= min && they <= max - 1) {
                     they = they + 1;
                     tvContadorThey.setText(String.valueOf(they));
@@ -84,21 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            @Override
-            public void onSwipeBottom() {
-                super.onSwipeBottom();
-                if (they > min) {
-                    they = they - 1;
-                    tvContadorThey.setText(String.valueOf(they));
-                }
-            }
-
         });
     }
 
     private void weCount() {
         tvContadorWe.setText(String.valueOf(we));
-        llWe.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+        llWe.setOnTouchListener(new OnSwipeTouchListener(InverseActivity.this) {
             @Override
             public void onSwipeTop() {
                 super.onSwipeTop();

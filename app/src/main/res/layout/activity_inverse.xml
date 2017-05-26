@@ -12,16 +12,48 @@
         android:background="@drawable/trucobg">
 
         <LinearLayout
-            android:id="@+id/llWe"
+            android:id="@+id/llTheyInverse"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/tvContadorTheyInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:rotation="180"
+                android:text="contador"
+                android:textSize="60dp" />
 
 
             <TextView
-                android:id="@+id/tvNameWe"
+                android:id="@+id/tvNameTheyInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:rotation="180"
+                android:text="Eles"
+                android:textSize="40dp" />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWeInverse"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNameWeInverse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -31,7 +63,7 @@
 
 
             <TextView
-                android:id="@+id/tvContadorWe"
+                android:id="@+id/tvContadorWeInverse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -39,38 +71,6 @@
                 android:text="contador"
                 android:textSize="60dp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llThey"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvNameThey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Eles"
-                android:textSize="40dp" />
-
-            <TextView
-                android:id="@+id/tvContadorThey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:text="contador"
-                android:textSize="60dp" />
-
-
-            <Button
-                android:id="@+id/btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
 
 
         </LinearLayout>
