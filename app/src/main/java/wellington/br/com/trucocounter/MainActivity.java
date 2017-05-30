@@ -4,18 +4,16 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
+import android.support.v7.widget.PopupMenu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,13 +31,16 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.tvContadorWe)
     TextView tvContadorWe;
 
-
+    @Bind(R.id.btn)
+    Button btn;
 
 
     private int we = 0;
     private final int min = 0;
     private int they = 0;
     private int max = 12;
+    Bundle bundle = new Bundle();
+
 
 
     @Override
@@ -54,20 +55,72 @@ public class MainActivity extends AppCompatActivity {
         tvContadorThey.setTypeface(type);
         tvContadorWe.setTypeface(type);
         tvNameThey.setTypeface(type);
-        tvNameWe.setTypeface(type);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popup = new PopupMenu(MainActivity.this, btn);
+                //Inflating the Popup using xml file
+                popup.getMenuInflater()
+                        .inflate(R.menu.menu, popup.getMenu());
+
+                //registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.menu_inverter:
+                                inverse();
+                                break;
+                            case R.id.menu_config:
+                                config();
+                                break;
+                            case R.id.menu_zerar:
+                                resetGame();
+                                break;
+                            default:
+                                Toast.makeText(
+                                        MainActivity.this,
+                                        "Erro",
+                                        Toast.LENGTH_SHORT
+                                ).show();
+                                break;
+                        }
+                        return true;
+                    }
+                });
+
+                popup.show(); //showing popup menu
+            }
+        });
+
 
         weCount();
         theyCount();
-
     }
 
-    @OnClick(R.id.btn)
-    public void inverse(){
-        Bundle bundle = new Bundle();
-        if (bundle != null){
+    public void inverse() {
+        if (bundle != null) {
             Intent intent = new Intent(this, InverseActivity.class);
             startActivity(intent);
         }
+    }
+
+    public void config(){
+        if(bundle != null){
+            Intent intent = new Intent(this, Config_activity.class);
+            startActivity(intent);
+        }
+    }
+
+    public void resetGame() {
+        we = 0;
+        they = 0;
+
+        tvContadorWe.setText(String.valueOf(we));
+        tvContadorThey.setText(String.valueOf(they));
+
+        Toast.makeText(MainActivity.this, "O jogo foi zerado", Toast.LENGTH_SHORT).show();
+
     }
 
     private void theyCount() {
