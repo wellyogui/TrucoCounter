@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         tvContadorThey.setTypeface(type);
         tvContadorWe.setTypeface(type);
         tvNameThey.setTypeface(type);
+        tvNameWe.setTypeface(type);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
