@@ -3,80 +3,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
+    android:keepScreenOn="true"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/ll"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/trucobg">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnMenuInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp" />
 
         <LinearLayout
-            android:id="@+id/llTheyInverse"
-            android:layout_width="0dp"
+            android:id="@+id/ll"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:background="@drawable/trucobg">
 
-            <TextView
-                android:id="@+id/tvContadorTheyInverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:rotation="180"
-                android:text="contador"
-                android:textSize="60dp" />
+            <LinearLayout
+                android:id="@+id/llTheyInverse"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/tvNameTheyInverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:rotation="180"
-                android:text="Eles"
-                android:textSize="40dp" />
+                <TextView
+                    android:id="@+id/tvContadorTheyInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="320dp"
+                    android:rotation="180"
+                    android:text="contador"
+                    android:textSize="60dp" />
 
 
+                <TextView
+                    android:id="@+id/tvNameTheyInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:rotation="180"
+                    android:text="Eles"
+                    android:textSize="40dp" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:id="@+id/ivDeckTheyInverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:rotation="180"
+
+                        android:layout_marginLeft="80dp"
+                        android:src="@drawable/deck" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWeInverse"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:id="@+id/ivDeckWeInverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="80dp"
+                        android:src="@drawable/deck" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNameWeInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nóis"
+                    android:textSize="40dp" />
+
+
+                <TextView
+                    android:id="@+id/tvContadorWeInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="contador"
+                    android:textSize="60dp" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/llWeInverse"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvNameWeInverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Nóis"
-                android:textSize="40dp" />
-
-
-            <TextView
-                android:id="@+id/tvContadorWeInverse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:text="contador"
-                android:textSize="60dp" />
-
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
+    </FrameLayout>
 
 </LinearLayout>

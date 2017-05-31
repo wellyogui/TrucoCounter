@@ -1,13 +1,21 @@
 package wellington.br.com.trucocounter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,12 +23,17 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+import static android.R.attr.keepScreenOn;
+import static android.view.View.GONE;
+
 public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.llThey)
     LinearLayout llThey;
     @Bind(R.id.llWe)
     LinearLayout llWe;
+    @Bind(R.id.fl)
+    FrameLayout fl;
 
     @Bind(R.id.tvNameThey)
     TextView tvNameThey;
@@ -30,17 +43,23 @@ public class MainActivity extends AppCompatActivity {
     TextView tvContadorThey;
     @Bind(R.id.tvContadorWe)
     TextView tvContadorWe;
-
+    @Bind(R.id.ivDeckThey)
+    ImageView ivDeckThey;
+    @Bind(R.id.ivDeckWe)
+    ImageView ivDeckWe;
     @Bind(R.id.btn)
-    Button btn;
+    ImageButton btn;
 
 
     private int we = 0;
     private final int min = 0;
     private int they = 0;
     private int max = 12;
+    private static boolean  inverse;
+    private static boolean deck;
     Bundle bundle = new Bundle();
-
+    private int counter = 0;
+    int restoDaDivisao = 9 % 3;
 
 
     @Override
@@ -56,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         tvContadorWe.setTypeface(type);
         tvNameThey.setTypeface(type);
         tvNameWe.setTypeface(type);
+        ivDeckThey.setVisibility(GONE);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,13 +115,42 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        if(inverse){
+            bundle = getIntent().getExtras();
+
+            if (bundle.getString("classFrom").equals(InverseActivity.class.toString())) {
+                we = bundle.getInt("WeCount");
+                they = bundle.getInt("TheyCount");
+                deck = bundle.getBoolean("Deck");
+                if (deck) {
+                    ivDeckWe.setVisibility(View.VISIBLE);
+                    ivDeckThey.setVisibility(GONE);
+                } else {
+                    ivDeckThey.setVisibility(View.VISIBLE);
+                    ivDeckWe.setVisibility(GONE);
+                }
+            }
+
+        }
+
+
+
         weCount();
         theyCount();
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     public void inverse() {
         if (bundle != null) {
             Intent intent = new Intent(this, InverseActivity.class);
+            bundle.putInt("TheyCount", they);
+            bundle.putInt("WeCount", we);
+            bundle.putBoolean("Deck", deck);
+            intent.putExtras(bundle);
+            inverse = true;
             startActivity(intent);
         }
     }
@@ -119,7 +168,9 @@ public class MainActivity extends AppCompatActivity {
 
         tvContadorWe.setText(String.valueOf(we));
         tvContadorThey.setText(String.valueOf(they));
-
+        ivDeckThey.setVisibility(GONE);
+        ivDeckWe.setVisibility(View.VISIBLE);
+        deck = true;
         Toast.makeText(MainActivity.this, "O jogo foi zerado", Toast.LENGTH_SHORT).show();
 
     }
@@ -133,7 +184,9 @@ public class MainActivity extends AppCompatActivity {
                 if (they >= min && they <= max - 1) {
                     they = they + 1;
                     tvContadorThey.setText(String.valueOf(they));
-
+                    ivDeckThey.setVisibility(View.VISIBLE);
+                    ivDeckWe.setVisibility(GONE);
+                    deck = false;
                 }
 
             }
@@ -159,6 +212,9 @@ public class MainActivity extends AppCompatActivity {
                 if (we >= min && we <= max - 1) {
                     we = we + 1;
                     tvContadorWe.setText(String.valueOf(we));
+                    ivDeckThey.setVisibility(View.GONE);
+                    ivDeckWe.setVisibility(View.VISIBLE);
+                    deck = true;
                 }
 
             }

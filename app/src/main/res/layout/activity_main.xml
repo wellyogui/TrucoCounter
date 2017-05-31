@@ -3,80 +3,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
+    android:keepScreenOn="true"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/ll"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/trucobg">
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/llWe"
-            android:layout_width="0dp"
+            android:id="@+id/ll"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:background="@drawable/trucobg">
+
+            <LinearLayout
+                android:id="@+id/llWe"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivDeckWe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/deck" />
+
+                </LinearLayout>
 
 
-
-            <TextView
-                android:id="@+id/tvNameWe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Nóis"
-                android:textSize="40dp" />
+                <TextView
+                    android:id="@+id/tvNameWe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nóis"
+                    android:textSize="40dp" />
 
 
-            <TextView
-                android:id="@+id/tvContadorWe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:text="contador"
-                android:textSize="60dp" />
+                <TextView
+                    android:id="@+id/tvContadorWe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="contador"
+                    android:textSize="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llThey"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivDeckThey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/deck" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNameThey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Eles"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/tvContadorThey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="contador"
+                    android:textSize="60dp" />
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/llThey"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/menu2"
+            android:background="#00FFFFFF"
+            />
 
-            <TextView
-                android:id="@+id/tvNameThey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Eles"
-                android:textSize="40dp" />
-
-            <TextView
-                android:id="@+id/tvContadorThey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:text="contador"
-                android:textSize="60dp" />
-
-
-            <Button
-                android:id="@+id/btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
+    </FrameLayout>
 
 
 </LinearLayout>
