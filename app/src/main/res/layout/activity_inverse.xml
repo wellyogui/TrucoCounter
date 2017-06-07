@@ -10,18 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btnMenuInverse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="200dp" />
+
 
         <LinearLayout
             android:id="@+id/ll"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="@drawable/trucobg">
+            android:background="@drawable/bg_inverse">
 
             <LinearLayout
                 android:id="@+id/llTheyInverse"
@@ -35,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="320dp"
+                    android:layout_marginTop="420dp"
                     android:rotation="180"
                     android:text="contador"
                     android:textSize="60dp" />
@@ -60,7 +55,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:rotation="180"
-
                         android:layout_marginLeft="80dp"
                         android:src="@drawable/deck" />
 
@@ -113,6 +107,15 @@
 
 
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnMenuInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu2"
+            android:background="#00FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp" />
 
     </FrameLayout>
 

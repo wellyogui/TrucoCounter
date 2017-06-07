@@ -8,6 +8,7 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class InverseActivity extends AppCompatActivity {
     @Bind(R.id.ivDeckWeInverse)
     ImageView ivDeckWeInverse;
     @Bind(R.id.btnMenuInverse)
-    Button btnMenuInverse;
+    ImageButton btnMenuInverse;
 
 
     private int we = 0;
