@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/menu2"
+            android:src="@mipmap/gear_menu"
             android:background="#00FFFFFF"
             />
 
