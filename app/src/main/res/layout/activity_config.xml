@@ -12,61 +12,89 @@
         android:orientation="vertical"
         android:background="@drawable/bg_config">
 
-
-
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome: "/>
+                android:paddingTop="28dp">
 
-            <TextView
+                <TextView
+                    android:id="@+id/tvNameWeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome: "
+                    android:textSize="30dp"/>
+
+                <EditText
+                    android:id="@+id/tvNameWeConfig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="Nóis"
+                    android:textSize="30dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNameTheyLabel"
+                    android:text="Nome: "
+                    android:textSize="30dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNameTheyConfig"
+                    android:maxLines="1"
+                    android:hint="Eles"
+                    android:textSize="30dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nóis"/>
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPontMaxLabel"
+                    android:text="Pontuação máxima: "
+                    android:textSize="30dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPontMax"
+                    android:maxLines="1"
+                    android:hint="12"
+                    android:inputType="number"
+                    android:textSize="30dp"/>
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome: "/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Eles"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pontuação máxima:  "/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12"/>
-
-
-        </LinearLayout>
 
     </LinearLayout>
+
+
 
 
 
