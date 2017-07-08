@@ -1,14 +1,9 @@
-package wellington.br.com.trucocounter;
+package wellington.br.com.tentoCounter;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import info.hoang8f.widget.FButton;
+import wellington.br.com.trucocounter.R;
 
 public class Config_activity extends AppCompatActivity {
 

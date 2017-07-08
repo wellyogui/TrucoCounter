@@ -1,4 +1,4 @@
-package wellington.br.com.trucocounter;
+package wellington.br.com.tentoCounter;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,6 +17,7 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import info.hoang8f.widget.FButton;
+import wellington.br.com.trucocounter.R;
 
 import static android.view.View.GONE;
 

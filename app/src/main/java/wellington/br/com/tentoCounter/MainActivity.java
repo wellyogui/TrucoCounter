@@ -1,18 +1,14 @@
-package wellington.br.com.trucocounter;
+package wellington.br.com.tentoCounter;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
-import android.support.v7.widget.TintContextWrapper;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,12 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import info.hoang8f.widget.FButton;
+import wellington.br.com.trucocounter.R;
 
 import static android.view.View.GONE;
 

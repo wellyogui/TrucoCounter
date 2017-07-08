@@ -1,4 +1,4 @@
-package wellington.br.com.trucocounter;
+package wellington.br.com.tentoCounter;
 
 import android.content.Context;
 import android.view.GestureDetector;

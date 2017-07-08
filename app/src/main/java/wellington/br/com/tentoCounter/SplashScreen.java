@@ -1,4 +1,4 @@
-package wellington.br.com.trucocounter;
+package wellington.br.com.tentoCounter;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import butterknife.ButterKnife;
+import wellington.br.com.trucocounter.R;
 
 public class SplashScreen extends AppCompatActivity {
 

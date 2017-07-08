@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".SplashScreen"
+            android:name="wellington.br.com.tentoCounter.SplashScreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="wellington.br.com.tentoCounter.MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".InverseActivity" />
-        <activity android:name=".Config_activity" />
-        <activity android:name=".tutorialActivity"></activity>
+        <activity android:name="wellington.br.com.tentoCounter.InverseActivity" />
+        <activity android:name="wellington.br.com.tentoCounter.Config_activity" />
+        <activity android:name="wellington.br.com.tentoCounter.tutorialActivity"></activity>
     </application>
 
 </manifest>

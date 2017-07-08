@@ -1,4 +1,4 @@
-package wellington.br.com.trucocounter;
+package wellington.br.com.tentoCounter;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -12,6 +12,7 @@ import com.google.android.gms.ads.AdView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import wellington.br.com.trucocounter.R;
 
 public class tutorialActivity extends AppCompatActivity {
 
