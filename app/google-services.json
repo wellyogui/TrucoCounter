@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "613220625917",
+    "firebase_url": "https://tentocounter-46e86.firebaseio.com",
+    "project_id": "tentocounter-46e86",
+    "storage_bucket": "tentocounter-46e86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613220625917:android:df5d45831060b4eb",
+        "android_client_info": {
+          "package_name": "wellington.br.com.trucocounter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613220625917-288s28g9l9f5drcu6j6v8m7qcev9vs2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOTUcfOEyQWkQyTvUIfL44DyiWAUhlp-c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613220625917:android:2ca1a8239168043b",
+        "android_client_info": {
+          "package_name": "wellington.com.br.trucocounter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613220625917-288s28g9l9f5drcu6j6v8m7qcev9vs2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOTUcfOEyQWkQyTvUIfL44DyiWAUhlp-c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

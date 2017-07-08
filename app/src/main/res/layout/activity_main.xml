@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="1"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bgtruco">
+
+            <LinearLayout
+                android:id="@+id/llWe"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivDeckWe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/deck" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvNameWe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nóis"
+                    android:textSize="40dp" />
+
+
+                <TextView
+                    android:id="@+id/tvContadorWe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="contador"
+                    android:textSize="60dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llThey"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ivDeckThey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/deck" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNameThey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Eles"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/tvContadorThey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="contador"
+                    android:textSize="60dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/fbMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:text="Menu"
+            android:textColor="@color/fbutton_color_clouds"
+            fbutton:buttonColor="@color/fbutton_color_concrete"
+            fbutton:cornerRadius="5dp"
+            fbutton:shadowColor="@color/fbutton_color_asbestos"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewSkin"
+            ads:adSize="SMART_BANNER"
+            android:layout_gravity="bottom"
+            ads:adUnitId="@string/adMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

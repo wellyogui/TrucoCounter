@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tento Counter</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="str_btn">Open Popup Menu</string>
+    <string name="inverter">Inverter a Tela</string>
+    <string name="config">Configuração</string>
+    <string name="zerar_jogo">Zerar o Jogo</string>
+    <string name="instrucao">Instrução</string>
+    <string name="menu_settings">menu</string>
+
+
+    <string name="admobIdApp">ca-app-pub-6154983735780202~3201033173</string>
+    <string name="adMain">ca-app-pub-6154983735780202/4677766378</string>
+    <string name="adTutorial">ca-app-pub-6154983735780202/2509702379</string>
+</resources>

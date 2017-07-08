@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_inverter"
+        android:title="@string/inverter"
+        />
+
+    <item
+        android:id="@+id/menu_config"
+        android:title="@string/config"
+        />
+
+    <item
+        android:id="@+id/menu_zerar"
+        android:title="@string/zerar_jogo"
+        />
+
+    <item
+        android:id="@+id/menu_tutorial"
+        android:title="@string/instrucao"
+        />
+
+</menu>
