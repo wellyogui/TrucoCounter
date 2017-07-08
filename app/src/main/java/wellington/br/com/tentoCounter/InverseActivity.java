@@ -149,6 +149,7 @@ public class InverseActivity extends AppCompatActivity {
                 popup.show(); //showing popup menu
             }
         });
+
         weCount();
         theyCount();
     }
